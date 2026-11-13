@@ -1,3 +1,5 @@
+![Balathstone](docs/banner.png)
+
 # Balathstone
 
 Hearthstone, rebuilt as a Balatro mod. Jokers, consumables, tags and Blinds are replaced with Hearthstone cards.
@@ -26,4 +28,5 @@ python tests/run_tests.py     # headless test suite
 python tools/build_art.py     # rebuild card atlases
 ```
 
-Fan-made and unofficial. Not affiliated with Blizzard Entertainment or LocalThunk. Hearthstone card art © Blizzard Entertainment.
+Fan-made, unofficial and free. Not affiliated with Blizzard Entertainment or LocalThunk.
+Code is MIT. Hearthstone art, names and text © Blizzard Entertainment; fonts © their owners. See [LICENSE](LICENSE).
