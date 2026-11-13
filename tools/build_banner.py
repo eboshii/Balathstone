@@ -16,10 +16,10 @@ BADGE = dict(ax=0.1586, ay=0.9144, hx=0.8666, hy=0.9176, digit_h=0.0942)  # src/
 
 CARDS = [  # key, atlas, (attack, health) or None
     ('j_hs_ragnaros_the_firelord', 'minions', (8, 8)),
-    ('j_hs_lyra_the_sunshard', 'minions', (3, 5)),
-    ('j_hs_leeroy_jenkins', 'minions', (6, 2)),
+    ('j_hs_deathwing', 'minions', (12, 12)),
     ('c_hs_fireball', 'consumables', None),
     ('j_hs_tyrande', 'minions', (5, 7)),
+    ('j_hs_lyra_the_sunshard', 'minions', (3, 5)),  # last = on top of the fan: the face of the mod
 ]
 
 
@@ -96,6 +96,16 @@ def main():
     bw, bh = 1280 * S, 640 * S
     img = background(bw // 4, bh // 4).resize((bw, bh), Image.BICUBIC)
     fan(img, tiles, cx=bw * 0.775, cy=bh * 0.52, scale=0.78 * S)
+    # "TOTAL CONVERSION MOD" tag above the title
+    d = ImageDraw.Draw(img)
+    tag_font = ImageFont.truetype(FONT, 21 * S)
+    tag = 'TOTAL CONVERSION MOD'
+    tx, ty = int(bw * 0.057), int(bh * 0.225)
+    tb = d.textbbox((tx, ty), tag, font=tag_font)
+    pad_x, pad_y = 16 * S, 8 * S
+    d.rounded_rectangle((tb[0] - pad_x, tb[1] - pad_y, tb[2] + pad_x, tb[3] + pad_y), radius=10 * S,
+                        fill=(122, 30, 18), outline=(250, 214, 120), width=3 * S)
+    d.text((tx, ty), tag, font=tag_font, fill=(250, 226, 160))
     title(img, int(bw * 0.05), int(bh * 0.31), 96 * S)
     d = ImageDraw.Draw(img)
     sub = ImageFont.truetype(FONT, 40 * S)
@@ -109,7 +119,7 @@ def main():
     # ---- icon 256x256 (Thunderstore)
     ic = background(64, 64).resize((512, 512), Image.BICUBIC)
     th = 480
-    t = tiles[2].resize((int(W * th / H), th), Image.LANCZOS)  # Leeroy, whole card
+    t = tiles[-1].resize((int(W * th / H), th), Image.LANCZOS)  # Lyra, the face of the mod
     ic.alpha_composite(t, ((512 - t.width) // 2, (512 - th) // 2))
     ic.resize((256, 256), Image.LANCZOS).convert('RGB').save(os.path.join(ROOT, 'docs', 'icon.png'), optimize=True)
     print('wrote docs/banner.png and docs/icon.png')

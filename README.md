@@ -2,17 +2,27 @@
 
 # Balathstone
 
-Hearthstone, rebuilt as a Balatro mod. Jokers, consumables, tags and Blinds are replaced with Hearthstone cards.
+A Hearthstone total conversion mod for Balatro. Jokers, consumables, tags and Blinds are replaced with Hearthstone cards.
 
-![Cards](docs/preview.png)
+## Minions
 
-- **175 minions.** Attack scores Mult, Health scores Chips. Battlecry, Deathrattle, Taunt, Divine Shield, Windfury and the rest work as keywords.
-- **90 Spells, Locations and Forbidden Spells** that buff minions, damage the Blind and edit your deck.
-- **17 Secrets** replace tags and trigger mid-round.
-- **69 Blinds** are Hearthstone minions and bosses that attack your board every hand.
-- **32 Treasures** replace vouchers.
+175 minions replace Jokers. Attack scores Mult, Health scores Chips. Battlecry, Deathrattle, Taunt, Divine Shield, Windfury and the rest work as keywords, and combos stack X Mult.
 
-Rules: [docs/DESIGN.md](docs/DESIGN.md)
+![Minions](docs/minions.png)
+
+## Spells and Secrets
+
+90 Spells, Locations and Forbidden Spells buff minions, damage the Blind and edit your deck. 17 Secrets replace tags and trigger mid-round. 32 Treasures replace vouchers.
+
+![Spells and Secrets](docs/spells.png)
+
+## Bosses
+
+69 Blinds are Hearthstone minions and bosses that attack your board every hand, with Charge, Stealth, Lifesteal, Reborn, summoned armies and more.
+
+![Bosses](docs/bosses.png)
+
+Full rules: [docs/DESIGN.md](docs/DESIGN.md)
 
 ## Install
 
