@@ -1,0 +1,21 @@
+# downloaded art and render caches (rebuilt by tools/build_art.py)
+art_cache/
+boss_art_cache/
+deck_cache/
+pack_cache/
+render_cache/
+render_cache_512/
+voucher_art_cache/
+
+# raw HearthstoneJSON dumps (build_art.py downloads them when missing)
+data/
+
+# dev output and old generators
+test_output/
+legacy/
+__pycache__/
+*.pyc
+
+# unused atlas
+assets/1x/bosses.png
+assets/2x/bosses.png
