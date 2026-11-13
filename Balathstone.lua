@@ -3,7 +3,7 @@
 --- MOD_ID: Balathstone
 --- MOD_AUTHOR: [Balathstone Team]
 --- MOD_DESCRIPTION: Total conversion: Hearthstone Minions, Spells, Quests, and Legendary Boss Blinds.
---- VERSION: 1.0.0
+--- VERSION: 1.0.1
 --- PREFIX: hs
 
 -- Enable smooth linear anti-aliased texture filtering for high-resolution cards

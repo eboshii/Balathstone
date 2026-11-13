@@ -2,7 +2,7 @@
   "id": "Balathstone",
   "name": "Balathstone",
   "author": ["Balathstone Team"],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Replaces Balatro Jokers, Consumables, and mechanics with Hearthstone Minions, Spells, and Quests. Focused on Minion stats (Attack=Mult, Health=Chips), keywords, and score scaling.",
   "prefix": "hs",
   "main_file": "Balathstone.lua",
